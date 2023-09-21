@@ -4,7 +4,7 @@ import clickhouse_connect
 class Clickhouse:
 
     def __init__(self, host, db_name, db_username, db_password):
-        self.__host = host
+        self.__host = host.replace('service-main.', 'service-main-0-0.')
         self.__db_name = db_name
         self.__username = db_username
         self.__password = db_password
